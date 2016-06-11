@@ -5,9 +5,15 @@
  */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 html {
-  font-family: sans-serif;
+  font-family: "Pacifico", sans-serif;
   -webkit-text-size-adjust: 100%;
       -ms-text-size-adjust: 100%;
+}
+.footer, footer {
+  text-align:center;
+  display: block;
+  width:100%;
+  margin:0 px auto;
 }
 body {
   margin: 0;
@@ -43,11 +49,16 @@ template {
   display: none;
 }
 a {
-  background-color: transparent;
+  /*background-color: transparent;*/
+  background-color: #b3b3b3;
+  cursor: hand;
 }
 a:active,
 a:hover {
   outline: 0;
+  cursor: hand;
+  background-color: #b3b3b3;
+  cursor:hand;
 }
 abbr[title] {
   border-bottom: 1px dotted;
@@ -62,6 +73,8 @@ dfn {
 h1 {
   margin: .67em 0;
   font-size: 2em;
+  font-family: "Pacifico";
+  color: #fff;
 }
 mark {
   color: #000;
@@ -130,6 +143,7 @@ input[type="reset"],
 input[type="submit"] {
   -webkit-appearance: button;
   cursor: pointer;
+  font-family: "Pacifico", serif;
 }
 button[disabled],
 html input[disabled] {
@@ -1086,7 +1100,7 @@ body {
   font-size: 14px;
   line-height: 1.42857143;
   color: #333;
-  background-color: #fff;
+  background-color: #eaeaea;
 }
 input,
 button,
@@ -1104,6 +1118,7 @@ a:hover,
 a:focus {
   color: #23527c;
   text-decoration: underline;
+  background-color: #b3b3b3;
 }
 a:focus {
   outline: thin dotted;
@@ -1170,7 +1185,7 @@ hr {
   clip: auto;
 }
 [role="button"] {
-  cursor: pointer;
+  cursor: hand;
 }
 h1,
 h2,
@@ -1185,7 +1200,7 @@ h6,
 .h5,
 .h6 {
   font-family: inherit;
-  font-weight: 500;
+  font-weight: 800;
   line-height: 1.1;
   color: inherit;
 }
@@ -1274,6 +1289,7 @@ h2,
 h3,
 .h3 {
   font-size: 24px;
+  font-family: "Vollkorn", serif;
 }
 h4,
 .h4 {
@@ -1289,6 +1305,7 @@ h6,
 }
 p {
   margin: 0 0 10px;
+  font-family: "Vollkorn", serif;
 }
 .lead {
   margin-bottom: 20px;
@@ -1618,6 +1635,7 @@ pre code {
   min-height: 1px;
   padding-right: 15px;
   padding-left: 15px;
+  /*background-color:#666666;*/
 }
 .col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12 {
   float: left;
@@ -1778,6 +1796,7 @@ pre code {
 @media (min-width: 768px) {
   .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12 {
     float: left;
+    /*background-color:#404040;*/
   }
   .col-sm-12 {
     width: 100%;
@@ -1793,9 +1812,13 @@ pre code {
   }
   .col-sm-8 {
     width: 66.66666667%;
+    background-color:#b3b3b3;
+    padding:15px;
+    border-radius:10px 60px 60px 10px;
   }
   .col-sm-7 {
     width: 58.33333333%;
+
   }
   .col-sm-6 {
     width: 50%;
@@ -2322,7 +2345,7 @@ th {
   background-color: #f9f9f9;
 }
 .table-hover > tbody > tr:hover {
-  background-color: #f5f5f5;
+  background-color: #b3b3b3;
 }
 table col[class*="col-"] {
   position: static;
@@ -2354,7 +2377,7 @@ table th[class*="col-"] {
 .table-hover > tbody > tr.active:hover > td,
 .table-hover > tbody > tr:hover > .active,
 .table-hover > tbody > tr.active:hover > th {
-  background-color: #e8e8e8;
+  background-color: #b3b3b3;
 }
 .table > thead > tr > td.success,
 .table > tbody > tr > td.success,
@@ -3176,7 +3199,8 @@ fieldset[disabled] .btn-primary.focus {
 .btn-success {
   color: #fff;
   background-color: #5cb85c;
-  border-color: #4cae4c;
+  border-color: #eaeaea;
+  font-family: "Pacifico", serif;
 }
 .btn-success:focus,
 .btn-success.focus {
@@ -3347,7 +3371,8 @@ fieldset[disabled] .btn-warning.focus {
 .btn-danger {
   color: #fff;
   background-color: #d9534f;
-  border-color: #d43f3a;
+  border-color: #eaeaea;
+  font-family: "Pacifico", serif;
 }
 .btn-danger:focus,
 .btn-danger.focus {
@@ -3982,16 +4007,19 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .nav > li {
   position: relative;
   display: block;
+  cursor: hand;
 }
 .nav > li > a {
   position: relative;
   display: block;
   padding: 10px 15px;
+  cursor: hand;
 }
 .nav > li > a:hover,
 .nav > li > a:focus {
   text-decoration: none;
-  background-color: #eee;
+  background-color: #b3b3b3;
+  cursor: hand;
 }
 .nav > li.disabled > a {
   color: #777;
@@ -4089,9 +4117,10 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 .nav-pills > li {
   float: left;
+
 }
 .nav-pills > li > a {
-  border-radius: 4px;
+  border-radius: 60px 10px 10px 60px;
 }
 .nav-pills > li + li {
   margin-left: 2px;
@@ -4968,20 +4997,31 @@ a.badge:focus {
 .jumbotron h1,
 .jumbotron .h1 {
   color: inherit;
+  font-family: "Pacifico", serif;
+  padding:20px
 }
 .jumbotron p {
+  padding:20px
   margin-bottom: 15px;
   font-size: 21px;
   font-weight: 200;
+  Font-family: "Rokkitt", serif;
 }
 .jumbotron > hr {
   border-top-color: #d5d5d5;
+
 }
 .container .jumbotron,
 .container-fluid .jumbotron {
   padding-right: 15px;
   padding-left: 15px;
-  border-radius: 6px;
+  border-radius: 20px;
+  background-image: url("../../img/header1.png");
+  background-repeat: no-repeat;
+  background-color: #b3b3b3;
+  background-size: cover;
+  width:100%;
+  /*height:auto;*/
 }
 .jumbotron .container {
   max-width: 100%;

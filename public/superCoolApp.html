@@ -11,11 +11,12 @@
         <script type="text/javascript" src="js/authentication/userController.js"></script>
         <script type="text/javascript" src="js/database/superCoolApp.database.js"></script>
         <link rel="stylesheet" href="bootstrap/css/bootstrap.css" />
+        <link href='https://fonts.googleapis.com/css?family=Pacifico|Vollkorn|Rokkitt' rel='stylesheet' type='text/css'>
     </head>
-    
+
     <body>
     <div class="container">
-        <div class="jumbotron"><h1>Super Cool App</h1><p>The superest cool app!</p></div>
+        <div class="jumbotron"><h1>Super Cool App</h1><p>Vote for your favorite new feature!!!</p></div>
 
         <div class="row">
             <div ng-controller="UserController as userCtrl" ng-show="userCtrl.isLoggedIn">
@@ -78,8 +79,8 @@
                     <ul class="nav nav-pills nav-stacked">
                         <li ng-repeat="feature in featureCtrl.data.features" ng-click="featureCtrl.changeTab(feature._id)">
                             <a><h3>{{feature.name}} ({{feature.totalVotes}})</h3></a>
-              
-                        
+
+
                     </ul>
                 </div>
                 <div class="col-sm-8">
@@ -90,18 +91,18 @@
                             <div class="progress-bar progress-bar-danger" style="width:{{feature.downVotes / (feature.upVotes + feature.downVotes) * 100}}%">{{feature.downVotes}}</div>
                             <div class="progress-bar progress-bar-success" style="width:{{feature.upVotes / (feature.upVotes + feature.downVotes) * 100}}%">{{feature.upVotes}}</div>
                         </div>
-                        
+
                         <ul class="list-inline" ng-show="featureCtrl.isLoggedIn">
                             <li class="" ng-click="featureCtrl.addDownVote(feature)"><button type="button" class="btn btn-danger btn-md"><span class="glyphicon glyphicon-chevron-down"></span> Downvote!</button></li>
                             <li class="" ng-click="featureCtrl.addUpVote(feature)"><button type="button" class="btn btn-success btn-md"><span class="glyphicon glyphicon-chevron-up"></span> Upvote!</a></li>
                         </ul>
 
-                                                
+
                         <section class="well well-sm" ng-repeat="comment in feature.comments">
                             <p>{{comment.commentText}}</p>
                             <p>-{{comment.user}} on {{comment.dateCreated | date : 'medium'}}</p>
                         </section>
-                    
+
                         <form role="form" ng-submit="featureCtrl.submitComment(feature)" novalidate ng-show="featureCtrl.isLoggedIn">
                             <!--input type="text" class="form-control" placeholder="Username..." ng-model="featureCtrl.comment.user" /-->
                             <textarea class="form-control" ng-model="featureCtrl.comment.commentText" placeholder="Comment text..." ></textarea>
@@ -112,6 +113,14 @@
               </div>
             </div>
         </div>
+
     </div>
+
     </body>
+    <div class="footer">
+    <footer>
+      <p>Created By: Geekwise Students BETA Class || Contact Us: <a href="mailto:gsbc@geekwise.com">
+      gsbc@geekwise.com</a></p>
+    </footer>
+    </div>
 </html>
